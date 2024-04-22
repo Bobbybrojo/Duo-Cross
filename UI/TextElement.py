@@ -4,7 +4,7 @@ import pygame.freetype
 class TextElement():
     def __init__(self, text, pos, color=(0, 0, 0), dropshadow=False, sway=False, size=65):
         self.text = text
-        self.font = pygame.freetype.Font("Duo-Cross/Assets/Fonts/NivoSB.otf", size)
+        self.font = pygame.freetype.Font("Assets/Fonts/NivoSB.otf", size)
         self.rect = self.font.get_rect(self.text)
         self.pos = [pos[0] - self.rect.width / 2, pos[1] - self.rect.height / 2]  # - self.rect.height / 2
         self.screen = pygame.display.get_surface()
