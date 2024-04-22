@@ -5,7 +5,7 @@ import math
 
 
 class Particle:
-    def __init__(self, loc, timer, velocity=None,  size=23, image="Assets/OrangeBlob.png"):
+    def __init__(self, loc, timer, velocity=None,  size=23, image="Duo-Cross/Assets/OrangeBlob.png"):
         self.image = pygame.image.load(image)
         self.loc = [loc[0] - size / 2, loc[1] - size / 2]
         self.velocity = velocity
@@ -31,7 +31,7 @@ class Particle:
 
 
 class ParticleCluster:
-    def __init__(self, loc, image="Assets/OrangeBlob.png"):
+    def __init__(self, loc, image="Duo-Cross/Assets/OrangeBlob.png"):
 
         self.particles = []
         self.loc = loc
@@ -77,7 +77,7 @@ class TextParticle:
         self.loc = loc
         self.text = text
         self.size = size
-        self.font = pygame.freetype.Font("Assets/Fonts/NivoSB.otf", self.size)
+        self.font = pygame.freetype.Font("Duo-Cross/Assets/Fonts/NivoSB.otf", self.size)
         self.screen = pygame.display.get_surface()
         self.alpha = 255
         self.color = (255, 255, 255, 255)
@@ -92,7 +92,7 @@ class TextParticle:
         self.size += 2
         if self.size < 90 and self.loc[1] > 1:
             self.font.render_to(self.screen, self.loc, self.text, self.color)
-        self.font = pygame.freetype.Font("Assets/Fonts/NivoSB.otf", self.size)
+        self.font = pygame.freetype.Font("Duo-Cross/Assets/Fonts/NivoSB.otf", self.size)
 
     def get_size(self):
         return self.size

@@ -31,11 +31,11 @@ class Enemy(pygame.sprite.Sprite):
     def set_type(self):
         self.type = random.randint(0, 2)
         if self.type == 0:
-            self.image = pygame.image.load("Assets/EnemyBlob.png")
+            self.image = pygame.image.load("Duo-Cross/Assets/EnemyBlob.png")
         elif self.type == 1:
-            self.image = pygame.image.load("Assets/BlueBlob.png")
+            self.image = pygame.image.load("Duo-Cross/Assets/BlueBlob.png")
         elif self.type == 2:
-            self.image = pygame.image.load("Assets/OrangeBlob.png")
+            self.image = pygame.image.load("Duo-Cross/Assets/OrangeBlob.png")
 
         self.image = pygame.transform.scale(self.image, (25, 25))
 

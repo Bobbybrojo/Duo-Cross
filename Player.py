@@ -18,9 +18,9 @@ class Player(pygame.sprite.Sprite):
         self.type = type
 
         if self.type == 0:
-            self.image = pygame.image.load("Assets/OrangeBlob.png")
+            self.image = pygame.image.load("Duo-Cross/Assets/OrangeBlob.png")
         elif self.type == 1:
-            self.image = pygame.image.load("Assets/BlueBlob.png")
+            self.image = pygame.image.load("Duo-Cross/Assets/BlueBlob.png")
         self.image = pygame.transform.scale(self.image, (32, 32))
         self.rect = self.image.get_rect()
         self.mask = pygame.mask.from_surface(self.image)

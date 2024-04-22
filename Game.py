@@ -11,7 +11,7 @@ from Player import Player
 from Particles import ParticleCluster, Wave, TextParticle
 from UI.TextElement import TextElement
 from UI.Label import Label, Button
-
+import os
 
 pygame.init()
 pygame.freetype.init()
@@ -40,7 +40,7 @@ background = background.convert()
 background.fill(colors["Teal"])
 
 # Font and Score
-font = pygame.freetype.Font("Assets/Fonts/NivoSB.otf", 65)
+font = pygame.freetype.Font("Duo-Cross/Assets/Fonts/NivoSB.otf", 65)
 
 score = 0
 lives = 3
@@ -50,7 +50,7 @@ life_surface.set_alpha(40)
 
 
 # Slanted BG Sprite
-background_image = pygame.image.load("Assets/SlantBG.png").convert_alpha()
+background_image = pygame.image.load("Duo-Cross/Assets/SlantBG.png").convert_alpha()
 background_image = pygame.transform.scale2x(background_image)
 background_image.set_colorkey((0, 0, 0))
 background_image.set_alpha(45)
@@ -74,8 +74,8 @@ orange_ball = Player(0)
 blue_ball = Player(1)
 
 # Particles
-orange_particles = ParticleCluster(orange_ball.get_loc(), image="Assets/OrangeBlob.png")
-blue_particles = ParticleCluster(blue_ball.get_loc(), image="Assets/BlueBlob.png")
+orange_particles = ParticleCluster(orange_ball.get_loc(), image="Duo-Cross/Assets/OrangeBlob.png")
+blue_particles = ParticleCluster(blue_ball.get_loc(), image="Duo-Cross/Assets/BlueBlob.png")
 
 waves = []
 
